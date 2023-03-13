@@ -8,8 +8,9 @@
   font-size: 119px;
   line-height: 145px;
   text-transform: uppercase;
-  color: var(--bg);
+  color: var(--violet-dark);
   text-align: center;
+  opacity: 0.5;
 }
 
 .product {
