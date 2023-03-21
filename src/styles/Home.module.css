@@ -110,6 +110,8 @@
 .right {
   width: 50%;
   position: relative;
+  border-radius: 40px 40px 40px 200px;
+  /*opacity: 0.9;*/
 }
 
 .discount {

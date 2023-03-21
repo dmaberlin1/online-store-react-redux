@@ -9,6 +9,7 @@ body {
   color: #fff;
   font-weight: 500;
   padding-bottom: 20px;
+
 }
 
 h1,
@@ -26,6 +27,9 @@ p {
 
 * {
   box-sizing: border-box;
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none;   /* Chrome/Safari/Opera */
+
 }
 
 img {

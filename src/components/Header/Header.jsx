@@ -7,7 +7,7 @@ import styles from "../../styles/Header.module.css";
 import { ROUTES } from "../../utils/routes";
 
 import LOGO from "../../images/logo.svg";
-import AVATAR from "../../images/avatar.jpg";
+import AVATAR from "../../images/avatar2.png";
 
 import { toggleForm } from "../../features/user/userSlice";
 import { useGetProductsQuery } from "../../features/api/apiSlice";
@@ -41,8 +41,8 @@ const Header = () => {
   return (
     <div className={styles.header}>
       <div className={styles.logo}>
-        <Link to={ROUTES.HOME}>
-          <img src={LOGO} alt="Stuff" />
+        <Link draggable={'false'}  to={ROUTES.HOME}>
+          <img  draggable={'false'}  src={LOGO} alt="Stuff" />
         </Link>
       </div>
 
@@ -57,7 +57,7 @@ const Header = () => {
 
         <form className={styles.form}>
           <div className={styles.icon}>
-            <svg className="icon">
+            <svg  className="icon">
               <use xlinkHref={`${process.env.PUBLIC_URL}/sprite.svg#search`} />
             </svg>
           </div>
@@ -65,7 +65,7 @@ const Header = () => {
             <input
               type="search"
               name="search"
-              placeholder="Search for anyting..."
+              placeholder="Search for anything..."
               autoComplete="off"
               onChange={handleSearch}
               value={searchValue}
@@ -80,8 +80,8 @@ const Header = () => {
                 ? "No results"
                 : data.map(({ title, images, id }) => {
                     return (
-                      <Link
-                        key={id}
+                      <Link draggable={'false'}
+                            key={id}
                         onClick={() => setSearchValue("")}
                         className={styles.item}
                         to={`/products/${id}`}
@@ -99,13 +99,13 @@ const Header = () => {
         </form>
 
         <div className={styles.account}>
-          <Link to={ROUTES.HOME} className={styles.favourites}>
+          <Link  draggable={'false'} to={ROUTES.HOME} className={styles.favourites}>
             <svg className={styles["icon-fav"]}>
               <use xlinkHref={`${process.env.PUBLIC_URL}/sprite.svg#heart`} />
             </svg>
           </Link>
 
-          <Link to={ROUTES.CART} className={styles.cart}>
+          <Link  draggable={'false'} to={ROUTES.CART} className={styles.cart}>
             <svg className={styles["icon-cart"]}>
               <use xlinkHref={`${process.env.PUBLIC_URL}/sprite.svg#bag`} />
             </svg>

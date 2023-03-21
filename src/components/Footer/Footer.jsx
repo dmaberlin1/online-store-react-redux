@@ -10,7 +10,7 @@ const Footer = () => (
   <section className={styles.footer}>
     <div className={styles.logo}>
       <Link draggable={'false'} to={ROUTES.HOME}>
-        <img src={LOGO} alt="Stuff" />
+        <img   draggable={'false'}  src={LOGO} alt="Stuff" />
       </Link>
     </div>
 

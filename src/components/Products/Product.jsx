@@ -37,8 +37,8 @@ const Product = (item) => {
         />
         <div className={styles["images-list"]}>
           {images.map((image, i) => (
-            <div
-              key={i}
+            <div draggable={'false'}
+                 key={i}
               className={styles.image}
               style={{ backgroundImage: `url(${image})` }}
               onClick={() => setCurrentImage(image)}
@@ -73,20 +73,20 @@ const Product = (item) => {
         <p className={styles.description}>{description}</p>
 
         <div className={styles.actions}>
-          <button
-            onClick={addToCart}
+          <button draggable={'false'}
+                  onClick={addToCart}
             className={styles.add}
             disabled={!currentSize}
           >
             Add to cart
           </button>
-          <button className={styles.favourite}>Add to favourites</button>
+          <button  draggable={'false'} className={styles.favourite}>Add to favourites</button>
         </div>
 
         <div className={styles.bottom}>
-          <div className={styles.purchase}>19 people purchased</div>
+          <div  draggable={'false'} className={styles.purchase}>19 people purchased</div>
 
-          <Link to={ROUTES.HOME}>Return to store</Link>
+          <Link draggable={'false'}  to={ROUTES.HOME}>Return to store</Link>
         </div>
       </div>
     </section>
